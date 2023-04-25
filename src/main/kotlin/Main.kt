@@ -3,7 +3,7 @@ fun main() {
     println(ValidPassword("shon9435"))
     println(ValidPassword("lekishonsheila"))
     println(ValidPassword("986"))
-    println(ValidPassword("gift3456"))
+
 
     val inputString = "Hello, world!"
     val result = analyzingString(inputString)
