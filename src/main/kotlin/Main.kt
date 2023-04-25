@@ -1,4 +1,10 @@
 fun main() {
+    println(ValidPassword("password"))
+    println(ValidPassword("shon9435"))
+    println(ValidPassword("lekishonsheila"))
+    println(ValidPassword("986"))
+    println(ValidPassword("gift3456"))
+
     val inputString = "Hello, world!"
     val result = analyzingString(inputString)
     println("First character: ${result.first}")
@@ -6,8 +12,6 @@ fun main() {
     println("Length of string: ${result.third}")
 //    println("Begins with vowel: ${result.fourth}")
     return(printMultiples())
-
-
 
 
 }
@@ -34,15 +38,18 @@ fun analyzingString(input: String): Triple<Char, Char, Int> {
 //4. Must contain a digit
 //Your function should determine whether the password provided is valid or not.
 //The function returns true/false (7pt)
-
-
-
-
-
-
-
-
-
+fun ValidPassword(password: String): Boolean {
+    if (password == "password") {
+        return false
+    }
+    if (password.length < 8 || password.length > 16) {
+        return false
+    }
+    if (!password.any { it.isDigit() }) {
+        return false
+    }
+    return true
+}
 
 
 //Create a function that prints out multiples of 6 and 8 between 1 and 1000. For
@@ -68,10 +75,7 @@ fun printMultiples() {
 //c. details() - Prints out the account number and balance and name in
 //this format: “Account number x with balance y is operated by z” (6pts)
 
-class CurrentAmount(){
 
-
-}
 
 
 //Create another class SavingsAccount. It has the same functions and
